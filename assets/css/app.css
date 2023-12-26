@@ -444,14 +444,30 @@ section {
     }
 }
 
-/* Original styles remain unchanged */
+/* Contact */
+@media only screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column; /* Change the flex direction to column */
+        height: auto; /* Auto-adjust the height based on content */
+    }
+
+    .formContainer {
+        order: 2; /* Change the order of the form container to appear below the text container */
+        margin-top: 20px; /* Adjust the top margin to provide spacing between the two containers */
+    }
+
+    .textContainer h1 {
+        font-size: 40px; /* Decrease the font size of "Get in touch" */
+    }
+}
+
 .contact {
-    height: 70vh;
     max-width: 1355px;
     margin: auto;
     display: flex;
     align-items: center;
     gap: 50px;
+    padding: 20px; /* Add padding to the contact section */
 }
 
 .textContainer {
@@ -460,43 +476,43 @@ section {
     flex-direction: column;
     gap: 40px;
 }
-  
-  h1 {
+
+h1 {
     font-size: 100px;
     line-height: 88px;
-  }
-  
-  span {
+}
+
+span {
     font-weight: 300;
-  }
-  
-  .formContainer {
+}
+
+.formContainer {
     flex: 1;
     position: relative;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea {
     padding: 20px;
     background-color: white;
     border: 1px solid black;
     color: black;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+button {
     padding: 20px;
     border: none;
     background-color: orange;
     cursor: pointer;
     font-weight: 500;
-  }
+}
 
 /* Footer */
 footer {
