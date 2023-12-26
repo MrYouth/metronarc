@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,400&display=swap');
+
+:root{
+    --c-brand: #fac562;
+    --c-dark: #333;
+    --c-body: #666;
+    --f-base: "Plus Jakarta Sans", sans-serif;
+    --n-height: 100px;
+}
+
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--c-body);
+    font-family: var(--f-base);
+    line-height: 1.2;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--c-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.heading-xl {
+    font-size: clamp(44px, 10vw, 120px);
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    font-size: clamp(28px, 4vw, 36px);
+}
+
+.heading-3 {
+    font-size: 20px
+}
+
+a{
+    color: var(--c-dark);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover{
+    color: var(--c-brand);
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+}
+
+ul{
+    list-style: none;
+}
+
+section {
+    padding: 140px 0;
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.section-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.btn{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--c-brand);
+    font-family: var(--f-base);
+    padding: 16px 34px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.btn:hover{
+    background-color: var(--c-brand);
+}
+
+/* Navbar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: var(--n-height);
+    display: flex;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: white;
+    font-size: 28px;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links li:not(:last-child){
+    margin-right: 44px;
+}
+
+.nav-links li.active a{
+    box-shadow: 0 2px var(--c-brand);
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links li a:hover {
+    color: var(--c-brand)
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span{
+    display: block;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.scrolled .brand{
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a {
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a:hover{
+    color: var(--c-brand);
+}
+
+.scrolled .hamburger span{
+    background-color: var(--c-dark);
+}
+
+@media (max-width: 768px){
+    .nav-links{
+        position: fixed;
+        top: var(--n-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 24px;
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    .nav-links li a{
+        color: var(--c-dark);
+    }
+
+    .nav-links.active{
+        height: 170px;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
+
+/* Hero */
+#hero {
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+#hero h1{
+    color: white;
+}
+
+@keyframes scrolltodown {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+
+.scroll-to-down{
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+}
+
+.scroll-to-down .las{
+    animation: scrolltodown 2s ease infinite;
+}
+
+/* About us */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-left {
+    width: 45%;
+    min-width: 300px; /* Set a minimum width for the text container */
+}
+
+.about-right {
+    width: 45%;
+}
+
+.heading-lg {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px; /* Added margin-bottom */
+}
+
+.about-description {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: justify; /* Added text-align property */
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.about-list li {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.list-text {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    gap: 44px;
+}
+
+.grid:hover{
+    cursor: pointer;
+}
+
+.two-col-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Specifications */
+.specs {
+    height: 400px; /* Set a fixed height for the grid container */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Optional: Add some spacing between grid items */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    .grid{
+        gap: 24px;
+    }
+    .specs {
+        min-height: 200px; /* You can adjust this value based on your design */
+        margin-bottom: 10px; /* Adjust spacing between grid items for smaller screens */
+    }
+
+    .two-col-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.specs img{
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.specs .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 44px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.specs .overlay h2 {
+    color: white;
+}
+
+.specs .overlay p{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.specs:hover .overlay {
+    opacity: 1;
+}
+
+.specs:hover img{
+    transform: rotate(15deg) scale(1.5) ;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure the text is above the other overlay */
+    background: black; /* Set the background color to black */
+    display: inline-block; /* Display as inline block */
+    padding: 15px; /* Adjust padding as needed */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Border styles with decreased width */
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+}
+
+@media only screen and (max-width: 768px) {
+    .hover-overlay {
+        font-size: 10px; /* Adjust font size for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+.specs:hover .hover-overlay {
+    display: none;
+}
+
+/* Contact */
+@media only screen and (max-width: 768px) {
+    .textContainer h1 {
+        font-size: 40px; /* Decrease the font size of "Get in touch" */
+    }
+
+    .formContainer {
+        width: 100%; /* Ensure the form text container stays wide */
+        max-width: none; /* Remove max-width for the form text container */
+        margin-top: 40px; /* Increase top margin to separate form from footer */
+    }
+}
+
+/* Original styles remain unchanged */
+.contact {
+    height: 70vh;
+    max-width: 1355px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+  
+  h1 {
+    font-size: 100px;
+    line-height: 88px;
+  }
+  
+  span {
+    font-weight: 300;
+  }
+  
+  .formContainer {
+    flex: 1;
+    position: relative;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  input,
+  textarea {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 20px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+/* Footer */
+footer {
+    padding: 20px 0; /* Add padding to the footer to separate it from other sections */
+}

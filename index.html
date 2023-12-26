@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronarc Technologies</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Add this style to center the logo text vertically */
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            margin-left: 10px; /* Adjust the margin as needed */
+            font-size: 20px;
+        }
+    </style>
+        <style>
+            /* Add this style to set the hero section as a relative position */
+            #hero {
+                position: relative;
+            }
+    
+            /* Add this style to set the video as a background */
+            #hero video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1; /* Ensure the video is behind other content */
+            }
+    
+            /* Add this style to hide the default video controls */
+            #hero video::-webkit-media-controls {
+                display:none !important;
+            }
+        </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <!-- Logo with text -->
+            <a href="#" class="brand">
+                <img src="./assets/images/logo.png" alt="Metronarc Technologies Logo" style="width: 60px; height: auto;">
+                <span class="logo-text">Metronarc Technologies</span>
+            </a>
+
+            <!-- Rest of the code remains unchanged -->
+            <ul class="nav-links">
+                <li class="active"><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#specifications">Specifications</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Hero with Video -->
+    <div id="hero">
+        <!-- Use the HTML video element to embed the video -->
+        <video autoplay loop muted>
+            <source src="assets/images/WeldVideo.mp4" type="video/mp4">
+            <!-- Add additional source elements for other video formats if needed -->
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Your existing hero content -->
+        <div class="container">
+            <h1 class="heading-xl"><span id="hero-titles">Creative Agency</span></h1>
+            <a href="#about" class="scroll-to-down"><i class="las la-arrow-down"></i></a>
+        </div>
+    </div>
+    <!-- Hero -->
+
+    <!-- About us -->
+    <div id="about" class="section">
+        <div class="container">
+            <div class="about-container" data-aos="zoom-in">
+                <!-- Left Column -->
+                <div class="about-left">
+                    <h2 class="heading-lg">Metronarc Technology</h2>
+                    <p class="about-description">
+                        Transforming heavy industries with cutting-edge IoT solutions.
+                        Real-time insights for enhanced efficiency, reduced rework costs, and unwavering quality assurance.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class="las la-check"></i> <span class="list-text">Real-time insights for enhanced efficiency</span></li>
+                        <li><i class="las la-check"></i> <span class="list-text">Reduced rework costs</span></li>
+                        <li><i class="las la-check"></i> <span class="list-text">Unwavering quality assurance</span></li>
+                    </ul>
+                </div>
+    
+                <!-- Right Column -->
+                <div class="about-right">
+                    <img src="./assets/images/image.png" alt="Metronarc Technology Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About us -->
+
+<!-- Specifications -->
+<section id="specifications">
+    <div class="container" data-aos="fade-up">
+        <div class="section-intro">
+            <h1 class="heading-2">Specifications</h1>
+        </div>
+        <div class="grid two-col-grid">
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/ArcOnOff.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Arc On Arc Off Time</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Arc On Arc Off Time</h2>
+                        <p>Arc-on Arc-off time per individual welder and machine</p>
+                    </div>
+                </div>
+            </div>
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/Analytics.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Productivity Analysis</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Productivity Analysis</h2>
+                        <p>Productivity analytics per welder, per station, per project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/Location.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Location and Down Time</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Location and Down Time</h2>
+                        <p>Welding machine location and down-time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/Ampere.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Real Time Amperage</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Real Time Amperage</h2>
+                        <p>Arc-on Arc-off time per individual welder and machine</p>
+                    </div>
+                </div>
+            </div>
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/WeldStop.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Real Time Stop Work Alerts</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Real Time Stop Work Alerts</h2>
+                        <p>Real-time stop-work alerts based on weld specification attributes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="specs"> <!-- Added "specs" class -->
+                <img src="./assets/images/WeldSignature.jpg" alt=""> <!-- Adjust width and height as needed -->
+                <div class="hover-overlay">Weld Signature</div>
+                <div class="overlay">
+                    <div class="text-overlay">
+                        <h2 class="heading-3">Weld Signature</h2>
+                        <p>Weld signature data giving visibility to QA/QC in real-time</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more .specs elements as needed -->
+        </div>
+    </div>
+</section>
+<!-- Specifications -->
+
+<!-- Contact -->
+<section id="contact">
+    <div class="contact" data-aos="fade-up">
+        <div class="textContainer">
+          <h1 style="color: #33b6fe;">Get in touch</h1> <!-- Set text color to #33b6fe -->
+          <div class="item">
+            <h2>Mail</h2>
+            <span>sales@metronarc.com</span>
+          </div>
+          <div class="item">
+            <h2>Address</h2>
+            <span>1 North Bridge Road #18-06 High Street Centre Singapore 179094</span>
+          </div>
+          <div class="item">
+            <h2>Phone</h2>
+            <span>+60 19-888 1469</span>
+          </div>
+        </div>
+        <div class="formContainer">
+          <form>
+            <input type="text" required placeholder="Name">
+            <input type="email" required placeholder="Email">
+            <textarea rows="8" placeholder="Message"></textarea>
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+</section>
+<!-- Contact -->
+
+<footer>
+    <div class="container">
+        <p style="text-align: center; color: #999;">Copyright © 2023 MetronArc Technologies Pte. Ltd. All rights reserved.</p>
+    </div>
+</footer>
+<!-- Footer -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
